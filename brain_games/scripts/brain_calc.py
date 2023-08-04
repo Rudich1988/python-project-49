@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
-from random import randint
-from brain_games.games.all_games import engine
 from brain_games.cli import welcome_user
+from brain_games.games.all_games import engine
+from random import randint, choice
 
 
-def main():
+def calc():
     print('Welcome to the Brain Games!')
     hello = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')   
+    print('What is the result of the expression?')
     count = 0
+    lst = ['+', '-', '*']
     for i in range(3):
-        numb = randint(0, 1000)
-        result = engine(numb)
+        num_1 = randint(0, 20)
+        num_2 = randint(1, 20)
+        action = choice(lst)
+        string = f'{num_1} {action} {num_2}'
+        result = engine(string)
         if result == 'Correct!':
             print(result)
             count += 1
@@ -24,4 +28,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    calc()
