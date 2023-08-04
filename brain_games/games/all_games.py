@@ -4,7 +4,7 @@ import prompt
 def engine(question):
     print(f'Question: {question}')
     answer = prompt.string('Your answer: ')
-    if answer in ['yes', 'no']:
+    if answer in ['yes', 'no'] and type(question) == int:
         if (answer == 'yes' and question % 2 == 0) or (answer == 'no' and question % 2 != 0):
             return 'Correct!'
         else:
@@ -54,46 +54,21 @@ def engine(question):
                 return 'Correct!'
         else:
             return f"'{answer}' is wrong answer ;(. Correct answer was '{final_result}'."
-    
-        
-
-
-        
-
-
-
-
-
-
-
-
-
-'''
-def engine(function, arg):
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print(arg)
-    count = 0
-    for i in range(3):
-        result = function()
-        print(result)
-        if result == 'Correct!':
-            count += 1
-            print(count, i)
-            if count == 3:
-                print(f'Congratulations, {name}')
-                break
-        elif result != 'Correct':
-            print(f"Let's try again, {name}!")
-            break
-    #if count == 3:
-     #   print(f'Congratulations, {name}')
-        
-
-
-if __name__ == '__main__':
-    engine()
-'''
-
+    elif answer in ['yes', 'no'] and type(question) == str:
+        numb = int(question)
+        check_list = []
+        if numb >= 2:
+            for i in range(1, numb + 1):
+                if numb % i == 0:
+                    check_list.append(i)
+        else:
+            check_list = []
+        if (len(check_list) == 2 and answer == 'yes') or (len(check_list) != 2 and answer == 'no'):
+            return 'Correct!'
+        else:
+            if answer == 'yes' and len(check_list) != 2:
+                correct_answer = 'no'
+            else:
+                correct_answer = 'yes'
+            return f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'."
     

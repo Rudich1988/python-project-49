@@ -40,5 +40,4 @@ def progression():
 
 
 if __name__ == '__main__':
-    progression()
-            
+    progression()            
