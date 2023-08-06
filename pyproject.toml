@@ -1,12 +1,13 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "5 games"
 authors = ["Игорь Рудич <rudi4.clarinet@mail.ru>"]
 readme = "README.md"
 packages = [
   { include = "brain_games" },
 ]
+classifiers = ["Topic :: Games/Entertainment :: Arcade"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -26,3 +27,5 @@ flake8 = "^6.1.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+repository = "https://github.com/Rudich1988/python-project-49"
