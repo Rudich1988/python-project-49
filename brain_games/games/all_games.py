@@ -14,7 +14,7 @@ def engine(rules, lst_questions, answers_correct):
         if answer != str(answers_correct[i]):
             return (f"'{answer}' is wrong answer ;(. "
                     f"Correct answer was '{answers_correct[i]}'.\n"
-                    f"Let's try again, {hello}"
+                    f"Let's try again, {hello}!"
                     )
             break
         else:
