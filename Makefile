@@ -16,6 +16,17 @@ package-install:
 make lint:
 	poetry run flake8 brain_games
 
+test:
+	poetry run pytest
+
+test-coverage:
+	poetry run pytest --cov=hexlet_python_package --cov-report xml
+
+selfcheck:
+	poetry check
+
+check: selfcheck test lint
+
 brain-even:
 	poetry run brain-even
 
@@ -30,3 +41,5 @@ brain-progression:
 
 brain-prime:
 	poetry run brain-prime
+
+.PHONY: install test lint selfcheck check build
