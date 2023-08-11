@@ -27,6 +27,9 @@ selfcheck:
 
 check: selfcheck test lint
 
+setup:
+	install test lint selfcheck check build
+
 brain-even:
 	poetry run brain-even
 
@@ -41,5 +44,3 @@ brain-progression:
 
 brain-prime:
 	poetry run brain-prime
-
-.PHONY: install test lint selfcheck check build
