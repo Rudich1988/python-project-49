@@ -24,7 +24,7 @@ selfcheck:
 
 check: selfcheck test lint
 
-setup:
+.PHONY:
 	install test lint selfcheck check build
 
 brain-even:
