@@ -10,9 +10,22 @@
 - pip (версия 19 и выше)
 - poetry 1.2.0 и выше
 ### Инструкции по установке проекта:
-- poetry build
-- python3 -m pip install --user dist/*.whl
-- poetry publish --dry-run
+```python
+make install
+make test
+make lint
+make selfcheck
+make check
+make build
+```
+### Инструкции по запуску игр:
+```python
+brain-calc
+brain-even
+brain-gcd
+brain-prime
+brain-progression
+```
 
 
 ### Hexlet tests and linter status:

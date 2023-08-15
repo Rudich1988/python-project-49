@@ -1,4 +1,4 @@
-from brain_games.games.all_games import engine, ROUND_NUMBER
+from brain_games.games.engine import engine, ROUND_NUMBER
 from random import randint
 
 
@@ -17,7 +17,6 @@ def generation_result(arg):
 
 
 def brain_progression_logic():
-    print('Welcome to the Brain Games!')
     game_rules = 'What number is missing in the progression?'
     answer_correct = []
     questions = []

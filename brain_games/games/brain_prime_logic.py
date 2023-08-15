@@ -1,9 +1,8 @@
-from brain_games.games.all_games import engine, ROUND_NUMBER
+from brain_games.games.engine import engine, ROUND_NUMBER
 from random import randint
 
 
 def brain_prime_logic():
-    print('Welcome to the Brain Games!')
     game_rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     answer_correct = []
     questions = []

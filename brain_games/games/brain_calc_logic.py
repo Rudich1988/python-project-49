@@ -1,9 +1,8 @@
-from brain_games.games.all_games import engine, ROUND_NUMBER
+from brain_games.games.engine import engine, ROUND_NUMBER
 from random import randint, choice
 
 
 def brain_calc_logic():
-    print('Welcome to the Brain Games!')
     game_rules = 'What is the result of the expression?'
     answer_correct = []
     questions = []

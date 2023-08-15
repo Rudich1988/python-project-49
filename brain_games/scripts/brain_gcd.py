@@ -3,7 +3,7 @@ from brain_games.games.brain_gcd_logic import brain_gcd_logic
 
 
 def gcd():
-    print(brain_gcd_logic())
+    brain_gcd_logic()
 
 
 if __name__ == '__main__':

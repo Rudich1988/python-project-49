@@ -1,9 +1,8 @@
-from brain_games.games.all_games import engine, ROUND_NUMBER
+from brain_games.games.engine import engine, ROUND_NUMBER
 from random import randint
 
 
 def brain_gcd_logic():
-    print('Welcome to the Brain Games!')
     game_rules = 'Find the greatest common divisor of given numbers.'
     answer_correct = []
     questions = []

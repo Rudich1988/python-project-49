@@ -3,7 +3,7 @@ from brain_games.games.brain_prime_logic import brain_prime_logic
 
 
 def prime():
-    print(brain_prime_logic())
+    brain_prime_logic()
 
 
 if __name__ == '__main__':
