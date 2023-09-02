@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from brain_games.games.brain_gcd_logic import brain_gcd_logic
+from brain_games.games.brain_gcd_logic import play_brain_gcd
 
 
 def gcd():
-    brain_gcd_logic()
+    play_brain_gcd()
 
 
 if __name__ == '__main__':

@@ -1,16 +1,17 @@
-from brain_games.games.engine import engine, ROUND_NUMBER
+from brain_games.games.engine import engine, MAX_ROUND_QUANTITY
 from random import randint, choice
 
 
-def brain_calc_logic():
+def play_brain_calc():
     game_rules = 'What is the result of the expression?'
     answer_correct = []
     questions = []
-    lst = ['+', '-', '*']
-    for i in range(ROUND_NUMBER):
+    operands = ['+', '-', '*']
+    current_round = 0
+    while current_round != MAX_ROUND_QUANTITY:
         numb_1 = randint(0, 20)
         numb_2 = randint(1, 20)
-        action = choice(lst)
+        action = choice(operands)
         question = f'{numb_1} {action} {numb_2}'
         if action == '*':
             result = numb_1 * numb_2
@@ -20,4 +21,5 @@ def brain_calc_logic():
             result = numb_1 - numb_2
         questions.append(question)
         answer_correct.append(result)
+        current_round += 1
     return engine(game_rules, questions, answer_correct)
