@@ -1,19 +1,15 @@
-from brain_games.games.engine import engine, MAX_ROUND_QUANTITY
 from random import randint
+
+GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+MIN_NUMBER_FOR_QUESTION = 0
+MAX_NUMBER_FOR_QUESTION = 1000
 
 
 def play_brain_even():
-    game_rules = 'Answer "yes" if the number is even, otherwise answer "no".'
-    answer_correct = []
-    questions = []
-    current_round = 0
-    while current_round != MAX_ROUND_QUANTITY:
-        question = randint(0, 1000)
-        if question % 2 == 0:
-            result = 'yes'
-        else:
-            result = 'no'
-        answer_correct.append(result)
-        questions.append(question)
-        current_round += 1
-    return engine(game_rules, questions, answer_correct)
+    number = randint(MIN_NUMBER_FOR_QUESTION, MAX_NUMBER_FOR_QUESTION)
+    question = number
+    if number % 2 == 0:
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
+    return (GAME_RULES, question, correct_answer)

@@ -1,25 +1,21 @@
-from brain_games.games.engine import engine, MAX_ROUND_QUANTITY
-from random import randint, choice
+from random import choice, randint
+
+GAME_RULES = 'What is the result of the expression?'
+MIN_NUMBER_FOR_COLCULATE = 0
+MAX_NUMBER_FOR_COLCULATE = randint(0, 20)
 
 
 def play_brain_calc():
-    game_rules = 'What is the result of the expression?'
-    answer_correct = []
-    questions = []
-    operands = ['+', '-', '*']
-    current_round = 0
-    while current_round != MAX_ROUND_QUANTITY:
-        numb_1 = randint(0, 20)
-        numb_2 = randint(1, 20)
-        action = choice(operands)
-        question = f'{numb_1} {action} {numb_2}'
-        if action == '*':
-            result = numb_1 * numb_2
-        elif action == '+':
-            result = numb_1 + numb_2
-        else:
-            result = numb_1 - numb_2
-        questions.append(question)
-        answer_correct.append(result)
-        current_round += 1
-    return engine(game_rules, questions, answer_correct)
+    operators = ('+', '-', '*')
+    operand_1 = randint(MIN_NUMBER_FOR_COLCULATE, MAX_NUMBER_FOR_COLCULATE)
+    operand_2 = randint(0, 20)
+    action = choice(operators)
+    question = f'{operand_1} {action} {operand_2}'
+    if action == '*':
+        result = operand_1 * operand_2
+    elif action == '+':
+        result = operand_1 + operand_2
+    else:
+        result = operand_1 - operand_2
+    correct_answer = result
+    return (GAME_RULES, question, correct_answer)

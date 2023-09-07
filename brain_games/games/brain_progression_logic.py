@@ -1,31 +1,29 @@
-from brain_games.games.engine import engine, MAX_ROUND_QUANTITY
 from random import randint
 
+GAME_RULES = 'What number is missing in the progression?'
+MIN_PROGRESSION_LENGTH = 5
+MAX_PROGRESSION_LENGTH = 10
+MIN_STEP = 1
+MAX_STEP = 20
+MIN_FIRST_NUMBER = 1
+MAX_FIRST_NUMBER = 100
 
-def make_res_list():
-    long_list = randint(5, 10)
-    step = randint(1, 20)
+
+def make_progression_element():
+    length = randint(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH)
+    step = randint(MIN_STEP, MAX_STEP)
     res_lst = []
-    start = randint(1, 100)
-    for index in range(long_list):
+    start = randint(MIN_FIRST_NUMBER, MAX_FIRST_NUMBER)
+    for index in range(length):
         element = start + index * step
-        res_lst.append(element)
+        res_lst.append(str(element))
     return res_lst
 
 
 def play_brain_progression():
-    game_rules = 'What number is missing in the progression?'
-    correct_answers = []
-    questions = []
-    current_round = 0
-    while current_round != MAX_ROUND_QUANTITY:
-        res_lst = make_res_list()
-        random_index = randint(0, len(res_lst) - 1)
-        correct_answer = res_lst[random_index]
-        res_lst[random_index] = '..'
-        str_res_list = [str(res_lst[k]) for k in range(len(res_lst))]
-        question = ' '.join(str_res_list)
-        correct_answers.append(correct_answer)
-        questions.append(question)
-        current_round += 1
-    return engine(game_rules, questions, correct_answers)
+    progression_elements = make_progression_element()
+    random_index = randint(0, len(progression_elements) - 1)
+    correct_answer = progression_elements[random_index]
+    progression_elements[random_index] = '..'
+    question = ' '.join(progression_elements)
+    return (GAME_RULES, question, correct_answer)
