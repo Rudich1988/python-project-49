@@ -13,15 +13,16 @@ def is_prime(number):
                 divisors.append(divisor)
     else:
         divisors = []
-    return divisors
+    if len(divisors) == 2:
+        return True
+    return False
 
 
 def play_brain_prime():
     number = randint(MIN_NUMBER_FOR_QUESTION, MAX_NUMBER_FOR_QUESTION)
-    number_divisors = is_prime(number)
-    question = number
-    if len(number_divisors) == 2:
+    prime_number = is_prime(number)
+    if prime_number:
         correct_answer = 'yes'
     else:
         correct_answer = 'no'
-    return (GAME_RULES, question, correct_answer)
+    return number, correct_answer

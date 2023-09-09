@@ -12,12 +12,12 @@ MAX_FIRST_NUMBER = 100
 def make_progression_element():
     length = randint(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH)
     step = randint(MIN_STEP, MAX_STEP)
-    res_lst = []
+    progression_elements = []
     start = randint(MIN_FIRST_NUMBER, MAX_FIRST_NUMBER)
     for index in range(length):
         element = start + index * step
-        res_lst.append(str(element))
-    return res_lst
+        progression_elements.append(str(element))
+    return progression_elements
 
 
 def play_brain_progression():
@@ -26,4 +26,4 @@ def play_brain_progression():
     correct_answer = progression_elements[random_index]
     progression_elements[random_index] = '..'
     question = ' '.join(progression_elements)
-    return (GAME_RULES, question, correct_answer)
+    return question, correct_answer

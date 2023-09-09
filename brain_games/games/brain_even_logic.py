@@ -7,9 +7,8 @@ MAX_NUMBER_FOR_QUESTION = 1000
 
 def play_brain_even():
     number = randint(MIN_NUMBER_FOR_QUESTION, MAX_NUMBER_FOR_QUESTION)
-    question = number
     if number % 2 == 0:
         correct_answer = 'yes'
     else:
         correct_answer = 'no'
-    return (GAME_RULES, question, correct_answer)
+    return number, correct_answer

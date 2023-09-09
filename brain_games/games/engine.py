@@ -1,20 +1,17 @@
 import prompt
+
 from brain_games.cli import welcome_user
 
 MAX_ROUND_QUANTITY = 3
 
 
-def engine(function):
+def engine(generating_game_data, game_rules):
     print('Welcome to the Brain Games!')
     name = welcome_user()
     current_round = 0
+    print(game_rules)
     while current_round != MAX_ROUND_QUANTITY:
-        game_data_tuple = function()
-        rules = game_data_tuple[0]
-        question = game_data_tuple[1]
-        correct_answer = game_data_tuple[2]
-        if current_round == 0:
-            print(rules)
+        question, correct_answer = generating_game_data()
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
         if answer != str(correct_answer):
