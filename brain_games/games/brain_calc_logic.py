@@ -5,7 +5,7 @@ MIN_NUMBER_FOR_COLCULATE = 0
 MAX_NUMBER_FOR_COLCULATE = 20
 
 
-def play_brain_calc():
+def get_game_data():
     operators = ('+', '-', '*')
     operand_1 = randint(MIN_NUMBER_FOR_COLCULATE, MAX_NUMBER_FOR_COLCULATE)
     operand_2 = randint(MIN_NUMBER_FOR_COLCULATE, MAX_NUMBER_FOR_COLCULATE)

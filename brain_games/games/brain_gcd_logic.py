@@ -15,7 +15,7 @@ def find_greatest_divisor(number_1, number_2):
     return divisor
 
 
-def play_brain_gcd():
+def get_game_data():
     number_1 = randint(MIN_NUMBER_FOR_QUESTION, MAX_NUMBER_FOR_QUESTION)
     number_2 = randint(MIN_NUMBER_FOR_QUESTION, MAX_NUMBER_FOR_QUESTION)
     question = f'{number_1} {number_2}'

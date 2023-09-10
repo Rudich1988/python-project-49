@@ -5,7 +5,7 @@ MIN_NUMBER_FOR_QUESTION = 0
 MAX_NUMBER_FOR_QUESTION = 1000
 
 
-def play_brain_even():
+def get_game_data():
     number = randint(MIN_NUMBER_FOR_QUESTION, MAX_NUMBER_FOR_QUESTION)
     if number % 2 == 0:
         correct_answer = 'yes'

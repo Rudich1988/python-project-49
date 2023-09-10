@@ -20,7 +20,7 @@ def make_progression_element():
     return progression_elements
 
 
-def play_brain_progression():
+def get_game_data():
     progression_elements = make_progression_element()
     random_index = randint(0, len(progression_elements) - 1)
     correct_answer = progression_elements[random_index]

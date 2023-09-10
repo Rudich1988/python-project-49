@@ -18,7 +18,7 @@ def is_prime(number):
     return False
 
 
-def play_brain_prime():
+def get_game_data():
     number = randint(MIN_NUMBER_FOR_QUESTION, MAX_NUMBER_FOR_QUESTION)
     prime_number = is_prime(number)
     if prime_number:
