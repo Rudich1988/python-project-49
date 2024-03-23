@@ -7,7 +7,6 @@ MAX_ROUND_QUANTITY = 3
 
 
 def engine(game):
-    #print('Welcome to the Brain Games!')
     name = welcome_user()
     current_round = 0
     print(game.GAME_RULES)
