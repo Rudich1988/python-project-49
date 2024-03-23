@@ -2,7 +2,7 @@ from random import randint
 
 MIN_NUMBER_FOR_QUESTION = 1
 MAX_NUMBER_FOR_QUESTION = 20
-GAME_RULES = 'Find the greatest common divisor of given numbers.'
+GAME_RULE = 'Find the greatest common divisor of given numbers.'
 
 
 def find_greatest_divisor(number_1, number_2):

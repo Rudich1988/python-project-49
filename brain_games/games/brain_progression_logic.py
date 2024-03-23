@@ -1,6 +1,6 @@
 from random import randint
 
-GAME_RULES = 'What number is missing in the progression?'
+GAME_RULE = 'What number is missing in the progression?'
 MIN_PROGRESSION_LENGTH = 5
 MAX_PROGRESSION_LENGTH = 10
 MIN_STEP = 1

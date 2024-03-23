@@ -1,6 +1,6 @@
 from random import randint
 
-GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
 MIN_NUMBER_FOR_QUESTION = 0
 MAX_NUMBER_FOR_QUESTION = 1000
 

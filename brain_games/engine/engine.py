@@ -9,7 +9,7 @@ MAX_ROUND_QUANTITY = 3
 def engine(game):
     name = welcome_user()
     current_round = 0
-    print(game.GAME_RULES)
+    print(game.GAME_RULE)
     while current_round != MAX_ROUND_QUANTITY:
         question, correct_answer = game.get_game_data()
         print(f'Question: {question}')

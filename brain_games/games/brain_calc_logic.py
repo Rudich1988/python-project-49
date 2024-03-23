@@ -1,6 +1,6 @@
 from random import choice, randint
 
-GAME_RULES = 'What is the result of the expression?'
+GAME_RULE = 'What is the result of the expression?'
 MIN_NUMBER_FOR_COLCULATE = 0
 MAX_NUMBER_FOR_COLCULATE = 20
 
