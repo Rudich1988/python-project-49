@@ -6,7 +6,7 @@ from brain_games.cli import welcome_user
 MAX_ROUND_QUANTITY = 3
 
 
-def engine(game):
+def start_game(game):
     name = welcome_user()
     current_round = 0
     print(game.GAME_RULE)
