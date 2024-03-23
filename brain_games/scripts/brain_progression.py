@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from brain_games.games import brain_progression_logic as play_brain_progression
+from brain_games.games import brain_progression as play_brain_progression
 from brain_games.engine.engine import start_game
 
 
