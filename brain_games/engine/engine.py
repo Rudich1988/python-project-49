@@ -8,9 +8,8 @@ MAX_ROUND_QUANTITY = 3
 
 def start_game(game):
     name = welcome_user()
-    current_round = 0
     print(game.GAME_RULE)
-    while current_round != MAX_ROUND_QUANTITY:
+    for round in range(MAX_ROUND_QUANTITY):
         question, correct_answer = game.get_game_data()
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
@@ -18,9 +17,10 @@ def start_game(game):
             print((f"'{answer}' is wrong answer ;(. "
                    f"Correct answer was '{correct_answer}'.\n"
                    f"Let's try again, {name}!"))
+            round = 0
             break
         else:
             print('Correct!')
-            current_round += 1
-    if current_round == 3:
+    if round == 2:
         print(f'Congratulations, {name}!')
+
