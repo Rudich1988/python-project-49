@@ -28,8 +28,6 @@ brain-progression
 ```
 
 
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/Rudich1988/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/Rudich1988/python-project-49/actions)
 
 <a href="https://codeclimate.com/github/Rudich1988/python-project-49/maintainability"><img src="https://api.codeclimate.com/v1/badges/8ada66fb5d59f4b10299/maintainability" /></a>
 
